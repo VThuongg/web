@@ -1,0 +1,383 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+/* Account */
+.form {
+  margin: 80px 0;
+  color: #ffffff;
+}
+.form .container .form-container {
+  position: relative;
+  max-width: 992px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25), 7px 7px 10px rgba(0, 0, 0, 0.22);
+}
+.form .container .form-container .form__content {
+  display: flex;
+  justify-content: center;
+}
+.form .container .form-container .form__content .form-group:not(:nth-child(7)) {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  position: relative;
+  color: #ffffff;
+}
+.form .container .form-container .form__content .form-group:not(:nth-child(7)) span {
+  font-size: 12px;
+  padding: 5px 0;
+  color: #f70000;
+}
+.form .container .form-container .form__content .form-group:not(:nth-child(7)) label {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  padding: 2px 0;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+}
+.form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]) {
+  height: 30px;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  background: transparent;
+  font-size: 16px;
+  caret-color: #ffc014;
+  color: #ffffff;
+  border-bottom: 1px solid #ffc014;
+}
+.form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]):not(:-moz-placeholder-shown) ~ label {
+  top: -20px;
+  left: 0;
+  color: #ffc014;
+  font-size: 12px;
+}
+.form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]):focus ~ label, .form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]):not(:placeholder-shown) ~ label {
+  top: -20px;
+  left: 0;
+  color: #ffc014;
+  font-size: 12px;
+}
+.form .container .form-container .form__content .form-group:not(:nth-child(7)) input:not([type=radio]).invalid {
+  border-color: #f70000;
+}
+.form .container .form-container .form__content .form-group:nth-child(7) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  margin-bottom: 40px;
+}
+.form .container .form-container .form__content .form-group:nth-child(7) .radio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.form .container .form-container .form__content .form-group:nth-child(7) .radio-container input {
+  opacity: 0;
+}
+.form .container .form-container .form__content .form-group:nth-child(7) .radio-container input:checked ~ .check-radio {
+  background-color: #ffc014;
+  transition: all 0.3s ease-in-out;
+}
+.form .container .form-container .form__content .form-group:nth-child(7) .radio-container input:checked ~ .check-radio::after {
+  display: block;
+}
+.form .container .form-container .form__content .form-group:nth-child(7) .radio-container .check-radio {
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.form .container .form-container .form__content .form-group:nth-child(7) .radio-container .check-radio::after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #202221;
+  transition: all 0.5s ease-in-out;
+}
+.form .container .form-container .form__content .form-group:nth-child(7) .radio-container:hover .check-radio {
+  background-color: #434b47;
+}
+.form .container .form-container .form__content .form-panel {
+  width: 50%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  padding: 50px 30px;
+}
+.form .container .form-container .form__content .form-panel h3 {
+  font-size: 26px;
+  color: #ffc014;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 22px;
+}
+.form .container .form-container .form__content .form-panel .form__signup-submit {
+  text-align: center;
+}
+.form .container .form-container .form__content .form-panel .form__signup-submit button {
+  background-color: #ffc014;
+  border: none;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 12px 45px;
+  text-transform: capitalize;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+          clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+.form .container .form-container .form__content .form-panel .form__signup-submit button:hover {
+  background-color: #202221;
+  color: #ffffff;
+}
+.form .container .form-container .form__content .form__sign-up {
+  border-radius: 15px 0 0 15px;
+  background-image: radial-gradient(#212322, #0e100f);
+  overflow: hidden;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(1) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 50ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(2) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 100ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(3) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 150ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(4) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 200ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(5) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 250ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(6) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 300ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(7) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 350ms;
+}
+.form .container .form-container .form__content .form__sign-up .item:nth-child(8) {
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 400ms;
+}
+.form .container .form-container .form__content .form__sign-in {
+  border-radius: 0 15px 15px 0;
+  background-image: radial-gradient(#212322, #0e100f);
+  overflow: hidden;
+}
+.form .container .form-container .form__content .form__sign-in .item:nth-child(1) {
+  transform: translateX(-100%);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 50ms;
+}
+.form .container .form-container .form__content .form__sign-in .item:nth-child(2) {
+  transform: translateX(-100%);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 100ms;
+}
+.form .container .form-container .form__content .form__sign-in .item:nth-child(3) {
+  transform: translateX(-100%);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 150ms;
+}
+.form .container .form-container .form__content .form__sign-in .item:nth-child(4) {
+  transform: translateX(-100%);
+  transition: all 0.6s ease-in-out;
+  transition-delay: 200ms;
+}
+.form .container .form-container .overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  overflow: hidden;
+}
+.form .container .form-container .overlay-container .overlay {
+  position: relative;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: #202221;
+  transition: all 0.6s ease-in-out;
+}
+.form .container .form-container .overlay-container .overlay .overlay-panel {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  row-gap: 30px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+.form .container .form-container .overlay-container .overlay .overlay-panel h3 {
+  color: #ffc014;
+  font-size: 26px;
+}
+.form .container .form-container .overlay-container .overlay .overlay-panel p {
+  font-size: 14px;
+}
+.form .container .form-container .overlay-container .overlay .overlay-panel button {
+  padding: 12px 45px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: #ffc014;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.5s;
+}
+.form .container .form-container .overlay-container .overlay .overlay-panel button:hover {
+  background-color: #202221;
+  color: #ffffff;
+  border: 1px solid #ffc014;
+}
+.form .container .form-container .overlay-container .overlay .overlay-left {
+  transform: translateX(-20%);
+}
+.form .container .form-container .overlay-container .overlay .overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(1) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(2) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(3) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(4) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(5) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(6) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(7) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-up .item:nth-child(8) {
+  transform: translateX(100%);
+}
+.form .container .form-container.right-panel-active .form__sign-in .item:nth-child(1) {
+  transform: translateX(0%);
+}
+.form .container .form-container.right-panel-active .form__sign-in .item:nth-child(2) {
+  transform: translateX(0%);
+}
+.form .container .form-container.right-panel-active .form__sign-in .item:nth-child(3) {
+  transform: translateX(0%);
+}
+.form .container .form-container.right-panel-active .form__sign-in .item:nth-child(4) {
+  transform: translateX(0%);
+}
+.form .container .form-container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+.form .container .form-container.right-panel-active .overlay-container .overlay {
+  transform: translateX(50%);
+}
+.form .container .form-container.right-panel-active .overlay-container .overlay .overlay-left {
+  transform: translateX(0);
+}
+.form .container .form-container.right-panel-active .overlay-container .overlay .overlay-right {
+  transform: translateX(20%);
+}
+.form .message-container {
+  font-size: 26px;
+  color: #ffc014;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(32, 34, 33, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.form .message-container .popup-message {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  height: 150px;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #111111;
+  border-radius: 10px;
+  scale: 0;
+  transition: all 0.3s ease-in-out;
+}
+.form .message-container .popup-message h3 {
+  text-align: center;
+}
+.form .message-container .popup-message button {
+  font-weight: 700;
+}
+.form .message-container .popup-message.active {
+  scale: 1;
+}
+.form .message-container.active {
+  visibility: visible;
+  opacity: 1;
+}

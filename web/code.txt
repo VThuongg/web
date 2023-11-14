@@ -1,0 +1,62 @@
+// lưu local 
+var arrProduct = [];
+function luuLocalStorage() {
+    var stringArrproduct = JSON.stringify(arrProduct);
+    localStorage.setItem('arrShoes',stringArrproduct);
+}
+
+// lay local
+function layLocal() {
+    if(localStorage.getItem('arrShoes)) {
+        var stringArrproduct = localStorage.getItem('arrShoes');
+        // chuyển định dạng về dạng object
+        mangShoe = JSON.parse(arrShoes)
+        console.log(mangShoe);
+
+        // gọi hàm render ra giao diện
+        renderTable(mangShoe)
+    }
+}
+// lay danh sách giày
+function layDanhSach() {
+    var promise = axios({
+        url: "https://shop.cyberlearn.vn/api/Product",
+        method: "GET",
+    })
+    promise.then(function(res)) {
+        console.log('ket qua',res.data);
+    }
+    promise.catch(function(err)) {
+        console.log(err)
+    }
+}
+window.addEventListener('load',function() {
+    layDanhSach();
+})
+
+
+
+ <section class="menu">
+    <div class="container">
+       <div class="menu_content">
+        <div class="list_menu">
+            <a href="#" class="active">Home</a>
+            <a href="#" class="active">Man</a>
+            <a href="#" class="active">Woman</a>
+            <a href="#" class="active">Contact</a>
+        </div>
+      <!-- <div class="login_search">
+        <div class="searchBox">
+          <form method="post">
+              <input type="text" class="textbox" placeholder="Search" style="font-size: 30px; width: 90%;">
+              <input title="Search" value="" type="submit" class="button">
+      </div>
+        <div class="list_login">
+            <a href="./view/account.html" class="login_form" style="font-size: 18px;"> <i class="fa fa-chalkboard-teacher"></i> Account</a>
+            <a href="tel: 0909090909" style="font-size: 18px;"> <i class="fa fa-phone-square"></i>Liên hệ</a>
+        </div>
+      </div> -->
+        
+       </div>
+    </div>
+  </section>
